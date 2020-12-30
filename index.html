@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=IBM+Plex+Sans+Condensed:ital,wght@1,300&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <title>Nombre de la plataforma</title>
+    </head>
+    <body class="bg-neutro">
+        <header class="container">
+            <div class="row h-100 d-flex align-items-center">
+                <h1 class="col-6 col-xl-3"><a href="index.html">Nombre de la plataforma</a></h1>
+                <nav class="col-6 col-xl-9 text-end"><i data-feather="log-in" class="pb-1"></i> <a href="iniciar.html">Iniciar sesión</a></nav>
+            </div>
+        </header>
+
+        <main class="container pb-5">
+            <div class="row">
+                <div class="col-lg-11 col-xl-10 col-xxl-9 mx-auto">
+                    <div class="card">
+                        <div class="row g-0 bg-dark">
+                            <div class="d-none d-md-inline col-md-6 overflow-hidden" id="p5"></div>
+                            <div class="col-md-6 bg-light">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center pt-2">Regístrate</h3>
+                                    <hr class="mx-1" />
+                                    <p class="card-title text-center small">¿Qué tan públicos son tus datos privados?</p>
+                                    <p class="card-title text-center small">Te podemos ayudar a averiguarlo</p>
+                                    <div class="form-label-group">
+                                        <label for="inputUserame" class="py-2">RUT</label>
+                                        <input type="text" class="form-control" placeholder="22.222.222-2" autofocus />
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <label for="inputEmail" class="py-2">Email</label>
+                                        <input type="email" class="form-control" placeholder="mail@mail.com" required />
+                                    </div>
+                                    <div class="d-grid py-3">
+                                        <a class="btn btn-secondary text-white" href="iniciar.html">REGISTRARSE</a>
+                                    </div>
+                                    <p class="text-center small">Generaremos una clave y la enviaremos a tu correo. Con esta clave y tu RUT podrás <a href="iniciar.html">iniciar sesión</a> durante 24 horas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="container">
+            <div class="row">
+                <div class="col text-center py-3">
+                    <small>Nombre de la plataforma elimina datos cada 24 horas. Aprende más sobre nuestras <a href="privacidad.html">políticas de privacidad</a>.</small>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script>feather.replace();</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js" integrity="sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==" crossorigin="anonymous"></script>
+        <script>
+            let espacio = document.getElementById("p5");
+            let alto = espacio.offsetHeight;
+            let ancho = (alto / 3) * 4;
+            console.log(alto);
+            console.log(ancho);
+            let theCapture;
+            let myCanvas;
+
+            if (ancho > 384) {
+                function setup() {
+                    myCanvas = createCanvas(ancho, alto).parent("p5");
+                    theCapture = createCapture(VIDEO);
+                    theCapture.size(ancho, alto);
+                    theCapture.hide();
+                }
+
+                function draw() {
+                    colorMode(HSB, 360, 100, 100);
+                    tint(map(mouseY, 0, height, 0, 360), 100, 100); // Tint blue
+                    image(theCapture, 0, 0, ancho, alto);
+                }
+            }
+        </script>
+    </body>
+</html>

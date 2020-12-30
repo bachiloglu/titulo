@@ -1,0 +1,209 @@
+:root {
+    --neutro: #000; /* deberías basarlo en moodboard */
+    --finanzas: #44867a; /* ídem */
+    --movilidad: #3f47ab; /* ídem */
+    --relaciones: #ff4255; /* ídem */
+    --novedades: #ff7f10; /* ídem */
+    --entretenimiento: #993f8b; /* ídem */
+    --salud: #3a9a92; /* ídem */
+    --claro: rgba(255, 255, 255, 0.75);
+    /*
+
+    Una vez tengas los colores justificados con moodboard, corresponde revisar su contrast ratio.
+    Eso lo puedes hacer con https://webaim.org/resources/contrastchecker/
+    Tienes que buscar una diferencia figura/fondo de 3:1 para figuras grandes y 4.5:1 para chicas.
+*/
+}
+
+body {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    transition: all ease 1s;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--claro);
+    transition: color ease 0.1s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: calc(0.85rem + 1vw);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+}
+
+h3 {
+    font-size: calc(0.85rem + 1vw);
+    padding-bottom: 0.325rem;
+}
+
+h3 a {
+    color: gray;
+    text-decoration: none;
+}
+
+p i {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+p.lead{
+    font-size: calc(1rem + 0.25vw);
+    font-weight: 300;    
+}
+
+#p5 canvas {
+    margin: 0 0 -1rem -6rem;
+    padding: 0;
+}
+
+div#finanzas h3 a:hover {
+    color: var(--finanzas);
+}
+
+div#movilidad h3 a:hover {
+    color: var(--movilidad);
+}
+
+div#relaciones h3 a:hover {
+    color: var(--relaciones);
+}
+
+div#novedades h3 a:hover {
+    color: var(--novedades);
+}
+
+div#entretenimiento h3 a:hover {
+    color: var(--entretenimiento);
+}
+
+div#salud h3 a:hover {
+    color: var(--salud);
+}
+
+.bg-neutro {
+    background: var(--neutro);
+}
+.bg-finanzas {
+    background: var(--finanzas);
+}
+.bg-movilidad {
+    background: var(--movilidad);
+}
+.bg-relaciones {
+    background: var(--relaciones);
+}
+.bg-novedades {
+    background: var(--novedades);
+}
+.bg-entretenimiento {
+    background: var(--entretenimiento);
+}
+.bg-salud {
+    background: var(--salud);
+}
+
+header {
+    color: white;
+    height: 25vh;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header svg {
+    stroke: white;
+    stroke-width: 5%;
+}
+
+.card {
+    color: gray;
+    border: none;
+    border-radius: 0.1rem 0.1rem;
+}
+
+.card a {
+    color: dimgray;
+}
+
+.card svg {
+    stroke-width: 7%;
+}
+
+@media (max-width: 575.98px) {
+    .card-body {
+        padding: 4.5vw;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .card-body {
+        padding: 3.5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card-body {
+        padding: 2.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-body {
+        padding: 1.5vw;
+    }
+}
+
+#spacer{
+    min-height: 80vh;
+}
+
+#menu {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+}
+
+#menu a {
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+}
+
+#menu svg {
+    stroke: white;
+    stroke-width: 6%;
+}
+
+footer {
+    color: var(--claro);
+}
