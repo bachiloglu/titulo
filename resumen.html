@@ -72,22 +72,6 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" id="novedades">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h3 class="card-title">
-                                    <a href="single.html?title=Novedades" class="d-flex justify-content-between align-items-center">
-                                        <span> <i data-feather="eye" class="pb-1"></i> Novedades </span>
-                                        <i data-feather="arrow-right"></i>
-                                    </a>
-                                </h3>
-                            </div>
-                            <p>No pusimos odiosos en Twitter</p>
-                            <img loading="lazy" src="img/dummy.svg" class="w-100 pt-2" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="card" id="entretenimiento">
                         <div class="card-body">
                             <h3 class="card-title">
@@ -111,6 +95,22 @@
                                 </a>
                             </h3>
                             <p>Según nuestra proyección hoy deberías ir a trotar al parque. ¡No olvides llevar agua!</p>
+                            <img loading="lazy" src="img/dummy.svg" class="w-100 pt-2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" id="alertas">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3 class="card-title">
+                                    <a href="single.html?title=Alertas" class="d-flex justify-content-between align-items-center">
+                                        <span> <i data-feather="eye" class="pb-1"></i> Alertas </span>
+                                        <i data-feather="arrow-right"></i>
+                                    </a>
+                                </h3>
+                            </div>
+                            <p>Encontramos tus datos en 8 bases de datos públicas. Ten cuidado.</p>
                             <img loading="lazy" src="img/dummy.svg" class="w-100 pt-2" />
                         </div>
                     </div>
@@ -147,9 +147,9 @@
                     jQuery("body").removeClass();
                     jQuery("body").addClass("bg-relaciones");
                 });
-                jQuery("#novedades").hover(function () {
+                jQuery("#alertas").hover(function () {
                     jQuery("body").removeClass();
-                    jQuery("body").addClass("bg-novedades");
+                    jQuery("body").addClass("bg-alertas");
                 });
                 jQuery("#entretenimiento").hover(function () {
                     jQuery("body").removeClass();

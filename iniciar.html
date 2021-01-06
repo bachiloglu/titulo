@@ -60,40 +60,19 @@
     <script>
 
         new TypeIt(".tipeando", {
-            speed: 50
+            speed: 60
         })
             .type("Recopilando información...")
-            .pause(1200)
+            .pause(800)
             .break()
             .type("Analizando...")
-            .pause(2000)
+            .pause(1000)
             .break()
-            .type("Mirando RRSS...")
-            .pause(1400)
-            .break()
-            .type("Mirando apps...")
-            .pause(1900)
-            .break()
-            .type("Mirando bases de datos...")
-            .pause(2890)
-            .break()
-            .type("Relacionando información...")
-            .pause(1120)
-            .break()
-            .type("Creando resumen...")
-            .pause(1600)
-            .break()
-            .type("Creando categorías...")
-            .pause(3100)
-            .break()
-            .type("Afinando los últimos detalles...")
-            .pause(400)
+            .type("Creando resumen y categorías...")
+            .pause(1100)
             .break()
             .type("¡Listo!")
             .go();
-
-
-
 
     </script>
     <script>
@@ -102,10 +81,10 @@
             jQuery(document).ready(function (jQuery) {
                 setTimeout(function() {
                     jQuery("#iniciando p").removeClass("d-none");
-                }, 27000);
+                }, 8000);
                 setTimeout(function() {
                     window.location = "resumen.html";
-                }, 27000);
+                }, 8000);
             });
     </script>
 

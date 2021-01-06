@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=IBM+Plex+Sans+Condensed:ital,wght@1,300&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
+        <script type="text/javascript" src="common.js"></script>
         <style>
             body{
                 transition: all ease 0.25s;
@@ -46,9 +47,9 @@
                         <a href="single.html?title=Relaciones"><i data-feather="heart" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Relaciones</span></a>
                         <a href="single.html?title=Finanzas"><i data-feather="dollar-sign" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Finanzas</span></a>
                         <a href="single.html?title=Movilidad"><i data-feather="map-pin" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Movilidad</span></a>
-                        <a href="single.html?title=Novedades"><i data-feather="eye" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Novedades</span></a>
                         <a href="single.html?title=Entretenimiento"><i data-feather="play-circle" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Entretenimiento</span></a>
                         <a href="single.html?title=Salud"><i data-feather="activity" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Salud</span></a>
+                        <a href="single.html?title=Alertas"><i data-feather="eye" class="pb-lg-1"></i> <span class="d-none d-lg-inline">Alertas</span></a>
                     </div>
                 </div>
             </div>
@@ -80,9 +81,9 @@
             let parrafoMovilidad2="Como te hemos dicho, has estado mucho tiempo en tu casa durante el último tiempo. Registras algunos patrones durante las últimas semanas, pero que no se dan en horas punta, así que creemos que no son tus recorridos típicos a la oficina. Van desde tu casa a la dirección Zenteno 1495, Santiago. Tu GPS indica varios lugares frecuentes, que hemos contrastado con tus ubicaciones etiquetadas en Instagram. Estos son los lugares en los que más tiempo has estado y los que más has visitado."
             let parrafoMovilidad3="Por último, estos son los recorridos de micro y metro que más usas. En comparación a tiempos de no pandemia, varían mucho. Aquí te dejamos una comparación: un día normal hace 8 meses y el último día en que utilizaste transporte público."
 
-            let parrafoNovedades1=""
-            let parrafoNovedades2=""
-            let parrafoNovedades3=""
+            let parrafoAlertas1="Probablemente te preguntarás cómo obtuvimos toda la información que te mostramos en esta plataforma. La obtuvimos de bases de datos públicas y de algunas aplicaciones que trabajan con tu información. También podemos leer información pública de acciones tan triviales como un like o un RT. Por ejemplo, aquí te dejamos una lista con las plataformas desde la que se ha filtrado tu correo electrónico."
+            let parrafoAlertas2="Te mostramos esto porque consideramos importante que estés al tanto de cómo tu información privada se puede hacer pública solo por como se manejan las políticas de datos de un país. Veamos que información podemos obtener con tu Nombre y RUT en plataformas gubernamentales del Gobierno de Chile."
+            let parrafoAlertas3="Y no solo eso, esto puede llevar a casos de doxing (exposición y divulgación de datos personales), cyberacoso y cyberbulling. La última conocida fue la de la persona que viajó por todo el mundo en tiempos de pandemia sin hacer cuarentena. Leeremos tus contactos más cercanos de Facebook y veremos qué información pública podemos obtener."
 
             let parrafoEntretenimiento1="¡Ha salido una nueva temporada de The Mandalorian! La primera temporada la viste en dos tardes, así que aprovechamos de avisarte. Por cierto, aprovechamos de mostrarte en cuántas plataformas de streaming has estado más tiempo."
             let parrafoEntretenimiento2="Según tu Spotify y si suponemos que lo que escuchas va en concordancia con tu estado de ánimo, este último tiempo has estado muy feliz. Mucho Bad Bunny y Dua Lipa. Harto reggaeton y mucho pop. Te dejamos aquí la lista de tus artistas más escuchados en las últimas dos semanas."
@@ -127,15 +128,15 @@
                     jQuery("#parrafo3").text(parrafoMovilidad3);
                     jQuery("#icono").attr("src", "img/map-pin.svg");
                     jQuery("#menu a:nth-child(3)").addClass("border-bottom border-2");
-                } else if (texto == "Novedades") {
+                } else if (texto == "Alertas") {
                     jQuery("body").removeClass("bg-neutro");
-                    jQuery("body").addClass("bg-novedades");
+                    jQuery("body").addClass("bg-alertas");
                     jQuery("#titular").text(texto);
-                    jQuery("#parrafo2").text(parrafoNovedades2);
-                    jQuery("#parrafo1").text(parrafoNovedades1);
-                    jQuery("#parrafo3").text(parrafoNovedades3);
+                    jQuery("#parrafo2").text(parrafoAlertas1);
+                    jQuery("#parrafo1").text(parrafoAlertas2);
+                    jQuery("#parrafo3").text(parrafoAlertas3);
                     jQuery("#icono").attr("src", "img/eye.svg");
-                    jQuery("#menu a:nth-child(4)").addClass("border-bottom border-2");
+                    jQuery("#menu a:nth-child(6)").addClass("border-bottom border-2");
                 } else if (texto == "Entretenimiento") {
                      jQuery("body").removeClass("bg-neutro");
                     jQuery("body").addClass("bg-entretenimiento");
@@ -144,13 +145,13 @@
                     jQuery("#parrafo2").text(parrafoEntretenimiento2);
                     jQuery("#parrafo3").text(parrafoEntretenimiento3);
                     jQuery("#icono").attr("src", "img/play-circle.svg");
-                    jQuery("#menu a:nth-child(5)").addClass("border-bottom border-2");
+                    jQuery("#menu a:nth-child(4)").addClass("border-bottom border-2");
                 } else if (texto == "Salud") {
                     jQuery("body").removeClass("bg-neutro");
                     jQuery("body").addClass("bg-salud");
                     jQuery("#titular").text(texto);
                     jQuery("#icono").attr("src", "img/activity.svg");
-                    jQuery("#menu a:nth-child(6)").addClass("border-bottom border-2");
+                    jQuery("#menu a:nth-child(5)").addClass("border-bottom border-2");
                 } else {
                     jQuery("#titular").text("Pendiente");
                     jQuery("#icono").attr("src", "img/alert-triangle.svg");
