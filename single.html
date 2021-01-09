@@ -91,9 +91,9 @@
             let parrafoAlertas2="Te mostramos esto porque consideramos importante que estés al tanto de cómo tu información privada se puede hacer pública solo por como se manejan las políticas de datos de un país. Veamos que información podemos obtener con tu Nombre y RUT en plataformas gubernamentales del Gobierno de Chile."
             let parrafoAlertas3="Y no solo eso, esto puede llevar a casos de doxing (exposición y divulgación de datos personales), cyberacoso y cyberbulling. La última conocida fue la de la persona que viajó por todo el mundo en tiempos de pandemia sin hacer cuarentena. Leeremos tus contactos más cercanos de Facebook y veremos qué información pública podemos obtener."
 
-            let parrafoEntretenimiento1="¡Ha salido una nueva temporada de The Mandalorian! La primera temporada la viste en dos tardes, así que aprovechamos de avisarte. Por cierto, aprovechamos de mostrarte en cuántas plataformas de streaming has estado más tiempo."
+            let parrafoEntretenimiento1="¡Ha salido una nueva temporada de The Mandalorian! La primera temporada la viste en dos tardes, así que queríamos de avisarte. Por cierto, aprovechamos de mostrarte en cuántas plataformas de streaming has estado más tiempo."
             let parrafoEntretenimiento2="Según tu Spotify y si suponemos que lo que escuchas va en concordancia con tu estado de ánimo, este último tiempo has estado muy feliz. Mucho Bad Bunny y Dua Lipa. Harto reggaeton y mucho pop. Te dejamos aquí la lista de tus artistas más escuchados en las últimas dos semanas."
-            let parrafoEntretenimiento3="Aquí también te dejamos tus horas de video y música en consumidas en tus plataformas de streaming favoritas de los últimos tres meses."
+            let parrafoEntretenimiento3="Aquí también te dejamos tus horas de video y música consumidas en tus plataformas de streaming favoritas de los últimos tres meses."
 
             let parrafoSalud1="En tiempo de pandemia aplaudimos que hagas ejercicio constantemente. En esta última semana has trotado mucho. Desde que tenemos registro, son tus mejores tiempos en la misma cantidad de kilometros. Trazamos tus recorridos y tus mejores tiempos. También añadimos tus latidos por minuto por día. Para que veas como mejora tu capacidad aeróbica."
             let parrafoSalud2="También es importante comer bien. Cruzamos datos con Movilidad para ver en que restaurantes o cadenas de commida rápida has comido últimamente y pudimos ver, gracias a los datos anexados a tu RUT en la aplicación de Unimarc que nos has comprado muchas frutas ni verduras. Ojalá estés llendo a la feria. Aquí te dejamos tus últimos pedidos en Uber Eats y Rappi. Cuídate."
@@ -156,6 +156,9 @@
                     jQuery("body").removeClass("bg-neutro");
                     jQuery("body").addClass("bg-salud");
                     jQuery("#titular").text(texto);
+                    jQuery("#parrafo1").text(parrafoEntretenimiento1);
+                    jQuery("#parrafo2").text(parrafoEntretenimiento2);
+                    jQuery("#parrafo3").text(parrafoEntretenimiento3);
                     jQuery("#icono").attr("src", "img/activity.svg");
                     jQuery("#menu a:nth-child(5)").addClass("border-bottom border-2");
                 } else {
