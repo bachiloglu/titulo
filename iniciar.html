@@ -60,16 +60,16 @@
     <script>
 
         new TypeIt(".tipeando", {
-            speed: 60
+            speed: 40
         })
             .type("Recopilando información...")
-            .pause(800)
+            .pause(700)
             .break()
             .type("Analizando...")
-            .pause(1000)
+            .pause(900)
             .break()
             .type("Creando resumen y categorías...")
-            .pause(1100)
+            .pause(900)
             .break()
             .type("¡Listo!")
             .go();
@@ -81,10 +81,10 @@
             jQuery(document).ready(function (jQuery) {
                 setTimeout(function() {
                     jQuery("#iniciando p").removeClass("d-none");
-                }, 8000);
+                }, 7000);
                 setTimeout(function() {
                     window.location = "resumen.html";
-                }, 8000);
+                }, 7000);
             });
     </script>
 
