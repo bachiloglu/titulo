@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap');
+
+body {
+    transition: all ease 0.25s;
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: black;
+    background-color: #e6e6e6;
+}
+
+.activo {
+    text-decoration: underline;
+}
+p,a {
+    color: black;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+
+.parrafo {
+    font-family: 'Spectral', serif !important;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 28px;
+    text-align: justify;
+}
+
+h3{color: gray;}
+
+.pie {
+    
+    color: #878787;
+    font-size: 14px;
+}
+
+.link {
+    font-family: 'Spectra', serif !important;
+    color: indianred;
+    text-decoration: none;
+}
+
+.cita{
+    font-size: 20px;
+    font-family: 'Spectral', serif !important;
+    font-style: italic;
+    text-align: justify;
+}
+
+.texto-notas{
+    font-size: 15px;
+    font-family: 'Spectral', serif !important;
+}
+
+.refs{
+    font-family: 'Spectral', serif !important;
+    color: indianred;
+}
